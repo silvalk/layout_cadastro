@@ -1,18 +1,12 @@
 import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
-import { View, Text, TextInput, Button,} from 'react-native';
-import { HelloWave } from '@/components/hello-wave';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { Link } from 'expo-router';
+import { StyleSheet, View, Text, TextInput, Button } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
 
       <Image
-    
+        source={require('../../assets/images/logo2.png')}
         style={styles.logo}
       />
 
@@ -28,12 +22,18 @@ export default function App() {
 
         <TextInput
           placeholder="Email"
-          placeholderTextColor="fff"
+          placeholderTextColor="#fff"
           style={styles.input}
         />
 
         <TextInput
           placeholder="Senha"
+          placeholderTextColor="#fff"
+          secureTextEntry
+          style={styles.input}
+        />
+       <TextInput
+          placeholder="Telefone"
           placeholderTextColor="#fff"
           secureTextEntry
           style={styles.input}
@@ -82,20 +82,19 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    backgroundColor: '#0000',
+    backgroundColor: '#1e293b',
     color: '#fff',
     padding: 15,
     borderRadius: 100,
     marginBottom: 15,
     borderWidth: 2,
-    borderColor: '#F0F8FF',
-    overflow: 'hidden'
+   borderColor: '#334155'
   },
 
   buttonArea: {
     width: '50%',
+    height: 55,
     borderBottomWidth: 8,
-    height: '60%',
     borderRadius: 100,
     overflow: 'hidden',
     marginBottom: 15,
